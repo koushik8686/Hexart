@@ -30,7 +30,7 @@ const sellermodel = require("./models/sellermodel")
 
 // Middleware to parse JSON bodies (optional, if you're also handling JSON data)
 app.use(cors({
-  origin: 'https://hexart-orpin.vercel.app',
+  origin: 'https://hexart-three.vercel.app/',
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
   credentials: true // If you're using cookies with the frontend
 }));

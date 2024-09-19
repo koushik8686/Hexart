@@ -22,7 +22,7 @@ app.use(
     cookie: {  maxAge: null }, 
   })
 );
-mongoose.connect(process.env.URL);
+mongoose.connect("mongodb+srv://koushik:koushik@cluster0.h2lzgvs.mongodb.net/fsd-project");
 //models 
 const usermodel = require("./models/usermodel")
 const {itemmodel} = require("./models/itemmodel")
@@ -32,7 +32,7 @@ const sellermodel = require("./models/sellermodel")
 app.use(cors({origin:'http://localhost:3000'}))
 app.options('*', cors()); // Enable pre-flight requests for all routes
 
-app.listen(4000, function (param) { console.log("Running on port 4000"); console.log("http://localhost:4000/"); })
+app.listen(4000, function (param) { console.log("Hi Running on port 4000"); console.log("http://localhost:4000/"); })
 
 //user routes
 app.get("/", function (req, res) {  res.send("hello welcome to hexart")})

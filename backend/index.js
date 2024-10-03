@@ -29,11 +29,7 @@ const {itemmodel} = require("./models/itemmodel")
 const sellermodel = require("./models/sellermodel")
 
 // Middleware to parse JSON bodies (optional, if you're also handling JSON data)
-app.use(cors({
-  origin: 'https://hexart-three.vercel.app/',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
-  credentials: true // If you're using cookies with the frontend
-}));
+app.use(cors());
 app.options('*', cors()); // Pre-flight handling for all routes
 
 app.listen(4000, function (param) { console.log("Hi Running on port 4000"); console.log("http://localhost:4000/"); })
